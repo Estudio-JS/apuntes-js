@@ -81,3 +81,88 @@ Los primeros dos son `Infinity` e `-Infinity` que representan números infinitos
 <br>
 
 ### Strings
+Los valores *string* son utilizados para representar **textos**. Su contenido esencerrado en comillas, ya sean simples, dobles o invertidas siempre y cuando coincidan al inicio y al cierre del string:
+
+```
+`Debajo en el mar`
+"Descansa en el océano"
+'Flota en el océano'
+```
+
+También es posible agregar saltos de línea o *Newlines* a un string utilizando una barra o diagonal invertida (Este caracter le indica al programa que será seguida por otro caracter que tendrá un valor especial). Si queremos dar un espacio utilizamos la combinación **\n**, si quisieramos tabular usamos la combinación **\t** y si dentro de un texto encapsulado en un string queremos agregar otras comillas usamos **\ (la comilla que queremos agregar)**. Por ejemplo:
+
+```
+ESCRITURA DEL STRING: 
+"Esta es la primera línea\nY esta es la segunda "
+
+
+RESULTADO FINAL:
+Esta es la primera linea
+Y esta es la segunda
+```
+
+Si quisieramos hacer que una barra invertida o \ aparezca en nuestro string debe ser precedida por otra barra similar, Por ejemplo;
+
+```
+ESCRITURA DEL STRING: 
+"Un caracter de salto de línea es ecrito así: \"\\n\"."
+
+
+RESULTADO FINAL:
+Un caracter de salto de línea es escrito así: "\n".
+```
+
+Al igual que los valores *number*, los Strings son modelados como una serie de bits. Este modelado se basa en el estándar **Unicode**, el cuál asigna un valor numérico a todo caracter existente, incluidos en Griego, Árabe, Japones, Armenio, etc. por ende, podemos decir que un String es una secuencia de números.
+
+No es posible realizar operaciones aritméticas con los strings, sin embargo, utilizamos el operador **+** para agregar cadenas de strings seguidas unas de otras. A este proceso de le conoce como ***Concatenar***
+
+```
+ESCRITURA DEL STRING: 
+"con" + "ca" + "te" + "nar"
+
+RESULTADO FINAL:
+concatenar
+```
+
+##### Comillas invertidas o plantillas literales:
+
+Al usar comillas invertidas, simples o dobles notamos que no nos generará ningún problema, sin embargo, sí pueden tener funcionalidades diferentes.
+
+Al usar comillas invertidas para englobar un string podemos utilizar `${}` para realizar una operación aritmética dentro de un string y devolver el resultado como un string:
+
+```
+ESCRITURA DEL STRING: 
+`La mitad de 100 es ${100 / 2}`
+
+RESULTADO FINAL:
+La mitad de 100 es 50
+```
+
+<br>
+<br>
+
+### Operadores
+
+<br>
+
+#### Operadores unitarios y binarios
+
+Anteriormente vimos que a los signos que usamos para realizar operaciones les llamamos *operadores*, sin embargo, no todos son signos.
+
+Existen operadores que se escriben con palabras como `typeof` que produce un string con el tipo de valor que le demos:
+
+```
+console.log(typeof 4.5)
+--> number
+
+console.log(typeof "x")
+--> String
+```
+
+Como podemos darnos cuenta, `typeof` funciona con un solo valor a diferencia de los anteriores operadores que necesitan por lo menos dos. A aquellos operadores que funcionan con un solo valor se les llama ***unitarios*** y a los que requieren dos se les llama ***binarios***. Existe un operador que puede ser unitario y binario al mismo tiempo y ese es el signo menor (-): 
+
+```
+console.log(-(10-2))
+--> -8
+
+```
